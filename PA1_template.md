@@ -1,4 +1,4 @@
-# Reproducible Research: Peer Assessment
+# Reproducible Research: Peer Assessment 1
 
 ### Author:  Sue Stacey
 
@@ -65,7 +65,7 @@ If the file has not been extracted to the ./activity directory, extract the file
 ## Warning: Removed 1728 rows containing missing values (position_stack).
 ```
 
-![plot of chunk Total_Steps_Per_Day](figure/Total_Steps_Per_Day-1.png) 
+![plot of chunk TotalStepsPerDay](figure/TotalStepsPerDay-1.png) 
 
 3. Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -95,7 +95,7 @@ The median of the total number of steps taken per day is 10765.
      "Average number of steps")    
 ```
 
-![plot of chunk 5-Minute_Intervals](figure/5-Minute_Intervals-1.png) 
+![plot of chunk 5-MinuteIntervals](figure/5-MinuteIntervals-1.png) 
 
 3. On average, 
 
@@ -128,7 +128,7 @@ The 5-minute interval at 8:35 contains the maximum number of steps, 206, on aver
           labs(title = "Total Number of Steps Taken Each Day (with imputed data)", x = "Date", y = "Number of steps")
 ```
 
-![plot of chunk Total_Steps_Per_Day_(with_imputed_data)](figure/Total_Steps_Per_Day_(with_imputed_data)-1.png) 
+![plot of chunk TotalStepsPerDay(ImputedData)](figure/TotalStepsPerDay(ImputedData)-1.png) 
 3.  Describe the results of imputing the missing data.
 
 ```r
@@ -192,5 +192,5 @@ Weekday Count:  12960
             xlab = "5-minute Interval", ylab = "Number of steps")     
 ```
 
-![plot of chunk 5-Minute_Intervals_(Weekend_vs_Weekday)](figure/5-Minute_Intervals_(Weekend_vs_Weekday)-1.png) 
+![plot of chunk 5-MinuteIntervals(Weekend_vs_Weekday)](figure/5-MinuteIntervals(Weekend_vs_Weekday)-1.png) 
      
