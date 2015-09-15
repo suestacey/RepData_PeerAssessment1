@@ -43,7 +43,7 @@ If the file has not been extracted to the ./activity directory, extract the file
 ```
 
 ## What is mean total number of steps taken per day?
-1.  Calculate the total number of setps taken per day.
+1.  Calculate the total number of steps taken per day.
 
 ```r
      stepsByDay <- tapply(activity$steps, activity$date, sum)
