@@ -39,7 +39,8 @@ If the file has not been extracted to the ./activity directory, extract the file
 
 ```r
      activity <- read.csv(targetResultFilePath)
-     activity$month <-as.numeric(format(as.Date(activity$date), "%m"))
+     activity$month <-format(as.Date(activity$date), "%B")
+     #activity$month <-as.numeric(format(as.Date(activity$date), "%m"))
 ```
 
 ## What is mean total number of steps taken per day?
@@ -58,14 +59,14 @@ If the file has not been extracted to the ./activity directory, extract the file
 ```
 
 ```
-## Warning: Removed 576 rows containing missing values (position_stack).
-```
-
-```
 ## Warning: Removed 1728 rows containing missing values (position_stack).
 ```
 
-![plot of chunk TotalStepsPerDay](figure/TotalStepsPerDay-1.png) 
+```
+## Warning: Removed 576 rows containing missing values (position_stack).
+```
+
+![plot of chunk Total_Steps_Per_Day](figure/Total_Steps_Per_Day-1.png) 
 
 3. Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -95,7 +96,7 @@ The median of the total number of steps taken per day is 10765.
      "Average number of steps")    
 ```
 
-![plot of chunk 5-MinuteIntervals](figure/5-MinuteIntervals-1.png) 
+![plot of chunk 5-Minute_Intervals](figure/5-Minute_Intervals-1.png) 
 
 3. On average, 
 
@@ -128,7 +129,7 @@ The 5-minute interval at 8:35 contains the maximum number of steps, 206, on aver
           labs(title = "Total Number of Steps Taken Each Day (with imputed data)", x = "Date", y = "Number of steps")
 ```
 
-![plot of chunk TotalStepsPerDayImputedData](figure/TotalStepsPerDayImputedData-1.png) 
+![plot of chunk Total_Steps_Per_Day_Imputed_Data](figure/Total_Steps_Per_Day_Imputed_Data-1.png) 
 3.  Describe the results of imputing the missing data.
 
 ```r
@@ -192,5 +193,5 @@ Weekday Count:  12960
             xlab = "5-minute Interval", ylab = "Number of steps")     
 ```
 
-![plot of chunk 5-MinuteIntervalsWeekendVSWeekday](figure/5-MinuteIntervalsWeekendVSWeekday-1.png) 
+![plot of chunk 5-Minute_Intervals_Weekend_VS_Weekday](figure/5-Minute_Intervals_Weekend_VS_Weekday-1.png) 
      

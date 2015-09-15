@@ -166,3 +166,7 @@ https://github.com/rdpeng/RepData_PeerAssessment1
 
 7c376cc5447f11537f8740af8e07d6facc3d9645
 ```
+
+## The Not So Obvious Learnings: 
+## 1. The email address in the local git profile will determine which profile is making the commit
+## 2. The parenthesis characters in the label of a code chunk prevents the .png image from displaying correctly when using the rawgit.com URL

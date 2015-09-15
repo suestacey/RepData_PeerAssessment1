@@ -31,7 +31,8 @@ If the file has not been extracted to the ./activity directory, extract the file
      }
      
      activity <- read.csv(targetResultFilePath)
-     activity$month <-as.numeric(format(as.Date(activity$date), "%m"))
+     activity$month <-format(as.Date(activity$date), "%B")
+     #activity$month <-as.numeric(format(as.Date(activity$date), "%m"))
 
      
 ```
@@ -42,7 +43,7 @@ If the file has not been extracted to the ./activity directory, extract the file
      stepsByDay <- tapply(activity$steps, activity$date, sum)
 ```
 2. Make a histogram of the total number of steps taken each day.
-```{r fig.width=11, fig.height=6, label="TotalStepsPerDay"}
+```{r fig.width=11, fig.height=6, label="Total_Steps_Per_Day"}
      ggplot(activity, aes(as.Date(date),steps)) +
           geom_bar(stat = "identity", color = "darkseagreen4", fill = "darkseagreen4", width =.6) + 
           facet_grid(. ~ month, scales = "free") +
@@ -66,7 +67,7 @@ The median of the total number of steps taken per day is `r stepsByDayMedian`.
 ```
 
 2.  Plot the time series block.
-```{r fig.width=11, fig.height=8, label="5-MinuteIntervals"}
+```{r fig.width=11, fig.height=8, label="5-Minute_Intervals"}
      library(ggplot2)
      ggplot(avgPerInterval, aes(interval,avgStepsPerInterval)) +
           geom_line(color = "orange4", size = 1.1) +
@@ -95,7 +96,7 @@ The 5-minute interval at `r maxNumStepsItime` contains the maximum number of ste
      }
 ```
 2.  Plot the time series with the imputed data.
-```{r fig.width=11, fig.height=6, label="TotalStepsPerDayImputedData"}
+```{r fig.width=11, fig.height=6, label="Total_Steps_Per_Day_Imputed_Data"}
      ggplot(imputedData, aes(as.Date(date), steps)) + 
           geom_bar(stat = "identity", color = "gold2", fill = "gold2", width =.6) + 
           facet_grid(. ~ month, scales = "free") + 
@@ -155,7 +156,7 @@ Weekday Count:  `r weekdayCount$n`
 
 ```
 2.  The Weekday vs Weekend plot clearly indicates a difference in the 5-minute interval period when personal movement occurs.  During the week, the highest use period appears to be quite concentrated in the early hours.  During the weekend, there's a wide variance when the personal movement occurs.
-```{r fig.width=11, fig.height=8, label="5-MinuteIntervalsWeekendVSWeekday"}
+```{r fig.width=11, fig.height=8, label="5-Minute_Intervals_Weekend_VS_Weekday"}
      
      xyplot(avgSteps$meanSteps ~ avgSteps$interval | avgSteps$weekdayOrEnd, 
             layout = c(1, 2), type = "l", col="cadetblue4", lwd=2.5,
