@@ -128,7 +128,7 @@ The 5-minute interval at 8:35 contains the maximum number of steps, 206, on aver
           labs(title = "Total Number of Steps Taken Each Day (with imputed data)", x = "Date", y = "Number of steps")
 ```
 
-![plot of chunk TotalStepsPerDay(ImputedData)](figure/TotalStepsPerDay(ImputedData)-1.png) 
+![plot of chunk TotalStepsPerDayImputedData](figure/TotalStepsPerDayImputedData-1.png) 
 3.  Describe the results of imputing the missing data.
 
 ```r
@@ -192,5 +192,5 @@ Weekday Count:  12960
             xlab = "5-minute Interval", ylab = "Number of steps")     
 ```
 
-![plot of chunk 5-MinuteIntervals(Weekend_vs_Weekday)](figure/5-MinuteIntervals(Weekend_vs_Weekday)-1.png) 
+![plot of chunk 5-MinuteIntervalsWeekendVSWeekday](figure/5-MinuteIntervalsWeekendVSWeekday-1.png) 
      
